@@ -14,7 +14,7 @@
 #define TEMP_UP         45
 #define TEPM_DOWN       20
 
-#define DEMO_INFO   "demo for RS - Servo\r\nDB Loovee & Jumo \r\nhttps://github.com/reeedstudio/demo_rs_2014_Jun"
+#define DEMO_INFO   "demo for RS - Servo\r\nDB Loovee & Jump \r\nhttps://github.com/reeedstudio/demo_rs_2014_Jun"
 
 const int pinServo = A2;
 

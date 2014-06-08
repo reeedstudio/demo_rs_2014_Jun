@@ -31,18 +31,6 @@
 #define VAL2MIN      -270
 #define VAL2MAX       260
 
-/*
-
-STATIC1 = 511
-STATIC2 = 516
-
-MAX1 = 773
-MIN1 = 249
-
-MAX2 = 775
-MIN2 = 246
-
-*/
 
 #define START1      0x53
 #define START2      0x01
@@ -54,6 +42,11 @@ MIN2 = 246
 #define DEIRR       1
 
 #define __DEBUG     1
+
+
+#define DEMO_INFO   "demo for RS - Remote\r\nDB Loovee & Jump \r\nhttps://github.com/reeedstudio/demo_rs_2014_Jun"
+
+
 
 #if __DEBUG
 #define __print(X)        Serial.print(X)
@@ -255,13 +248,6 @@ void makeDirSpeed(int x, int y)
     }
     else return ;
 
-   // __print("right speed: ");
-   // __println(speedRight);
-   // __print("left  speed: ");
-   // __println(speedLeft);
-   
-   
-    // sendToRfbee();
 
     set_speed(speedLeft, speedRight);
 }
@@ -273,10 +259,8 @@ void makeDirSpeed(int x, int y)
 void setup()
 {
     Serial.begin(115200);
-    
-    
-    // testVal();
-    
+
+    Serial.println(DEMO_INFO);
     comVal1 = getAnalog(pinSensor1);
     comVal2 = getAnalog(pinSensor2);
     
@@ -295,8 +279,7 @@ void loop()
 
     val1 = getAnalog(pinSensor1) - comVal1;
     val2 = getAnalog(pinSensor2) - comVal2;
-    
-    //cout << val1 << '\t' << val2 << endl;
+
     
     if(getAnalog(pinSensor2) > 1000)
     {
@@ -316,8 +299,6 @@ void loop()
 
         if(val1 != valbuf1 || val2 != valbuf2)
         {
-
-            
             makeDirSpeed(val1, val2);
            // __println();
         }

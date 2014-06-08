@@ -4,7 +4,7 @@
 #include <Streaming.h>
 #include <ChainableLED.h>
 
-#define DEMO_INFO   "demo for RS - Colorful Tank\r\nDB Loovee & Jumo \r\nhttps://github.com/reeedstudio/demo_rs_2014_Jun"
+#define DEMO_INFO   "demo for RS - Colorful Tank\r\nDB Loovee & Jump \r\nhttps://github.com/reeedstudio/demo_rs_2014_Jun"
 
 #define NUM_LEDS  6
 

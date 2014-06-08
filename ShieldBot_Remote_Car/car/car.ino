@@ -1,6 +1,4 @@
 // ir remote car with shield bot
-// 
-
 
 #include <Shieldbot.h>
 #include <IRSendRev.h>
@@ -11,10 +9,16 @@ Shieldbot shieldbot = Shieldbot();
 #define beepon()        digitalWrite(3, HIGH)
 #define beepoff()       digitalWrite(3, LOW)
 
+#define DEMO_INFO   "demo for RS - Shield Bot\r\nDB Loovee & Jump \r\nhttps://github.com/reeedstudio/demo_rs_2014_Jun"
+
+
 void setup()
 {
 
     Serial.begin(115200);
+    
+    Serial.println(DEMO_INFO);
+    
     shieldbot.setMaxSpeed(255);//255 is max
 
     pinMode(3, OUTPUT);
